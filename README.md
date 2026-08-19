@@ -4,7 +4,7 @@ Security configuration gap analysis — comparing a Microsoft security baseline 
 
 System Configuration Gap Analysis — Windows Audit Policy Baseline
 Overview
-I put together this lab project while working through CompTIA Security+ training. The goal was to get hands-on experience with security configuration management — specifically, comparing a recommended Microsoft security baseline against the actual (“effective”) settings running on a live Windows machine, and identifying where the two don’t match. This is a core part of how real organizations catch configuration drift and unmonitored systems before they become incidents.
+I put together this lab project while working through CompTIA Security+ training. The goal was to get hands-on experience with security configuration management  specifically, comparing a recommended Microsoft security baseline against the actual (“effective”) settings running on a live Windows machine, and identifying where the two don’t match. This is a core part of how real organizations catch configuration drift and unmonitored systems before they become incidents.
 What This Lab Is About
 Basically, I took a Microsoft-published security baseline (a known-good set of audit policy settings) and ran it against the live configuration of a Windows 10 target machine (PC10) using the Policy Analyzer tool. The idea is simple but important: baselines only protect you if the system is actually configured to match them. This lab walks through finding the gaps between “what should be configured” and “what’s actually configured.”
 What I Wanted to Learn
@@ -117,17 +117,21 @@ Skills I Built
 ✅ Writing a gap analysis report a real team could act on
 ✅ Basic PowerShell navigation and file management
 ✅ Connecting technical findings back to compliance/governance concepts
+
 What’s Next for Me
+
 I’m not stopping here. I want to:
 	•	Actually push a corrected audit policy via Group Policy and re-run the comparison to confirm remediation
 	•	Learn how to pipe these audit events into a SIEM and build detection rules around them
 	•	Get my CompTIA Security+ cert — working on it now
 	•	Explore CIS Benchmarks as another baseline source, not just Microsoft’s
 	•	Keep documenting labs like this as I go
+	
 How to Look at This Repo
 	•	Start with this README for the full analysis
 	•	Check out the screenshots to see the Policy Analyzer comparison directly
 	•	Feel free to ask questions — I’m still learning too
+	
 What I Learned
 	•	A security baseline is only useful if you actually check systems against it — writing the policy isn’t the same as enforcing it
 	•	“No Auditing” isn’t a neutral gap, it’s a blind spot — if it’s not logged, it didn’t happen as far as your evidence is concerned
@@ -135,15 +139,18 @@ What I Learned
 	•	Prioritization matters — not every gap is equally urgent, and a good gap analysis ranks them instead of listing them flat
 	•	Configuration drift is likely to affect more than one machine, so fixes belong at the policy/GPO level, not the individual endpoint
 Important Note
-⚠️ Real talk:
+
+⚠️ important information:
 	•	This lab was performed in an isolated, instructor-provided lab environment (CompTIA’s assisted lab platform) on a lab-only machine (PC10)
 	•	No production systems were assessed or modified
 	•	IP addresses, hostnames, and other identifiers shown are lab environment values, not real infrastructure
+	
 Resources I Used
 	•	Microsoft Security Compliance Toolkit / Policy Analyzer — baseline comparison tool
 	•	Microsoft Security Baselines — reference baselines
 	•	Windows Advanced Audit Policy documentation — reference material
 	•	CompTIA Security+ — studying for this
+	
 About Me
 Samuel donkor
 Security-focused learner | CompTIA Security+ in progress | Configuration & Compliance enthusiast
